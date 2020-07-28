@@ -114,4 +114,43 @@ router.post(
   }
 );
 
+// access workflow
+// @route           GET api/profile==> based on the user id from the token
+// @description     Get all user profile
+// @access          Public
+
+router.get('/', async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+    res.json(profiles);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// access workflow
+// @route           GET api/profile/:user_id
+// @description     Get user profile by iserid
+// @access          Public
+
+router.get('/user/:user_id', async (req, res) => {
+  try {
+    const profile = await Profile.find({
+      user: req.params.user_id,
+    }).populate('user', ['name', 'avatar']);
+
+    if (!profile)
+      return res.status(400).json({ msg: 'This user does not have a profile' });
+
+    res.json(profile);
+  } catch (error) {
+    console.error(error.message);
+    if (error.kind == 'ObjectId') {
+      return res.status(400).json({ msg: 'Profile not found' });
+    }
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;

@@ -153,4 +153,24 @@ router.get('/user/:user_id', async (req, res) => {
   }
 });
 
+// access workflow
+// @route           DELETE api/profile ==> based on the user id from the token
+// @description     Delete a user profile, user and posts
+// @access          Private
+
+router.delete('/', auth, async (req, res) => {
+  try {
+    //   TODO ==> remove a user's posts
+
+    // removing a user profile
+    await Profile.findOneAndRemove({ user: req.user.id });
+    // remove the user
+    await User.findByIdAndRemove({ _id: req.user.id });
+    res.json({ msg: 'User has now been deleted from the app' });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;

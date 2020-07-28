@@ -1,5 +1,9 @@
 const jwt = require('jsonwebtoken');
 const config = require('config');
+const express = require('express');
+const router = express.Router();
+const { check, validationResult } = require('express-validator/check');
+const bcrypt = require('bcryptjs');
 // const dotenv = require('dotenv');
 // // require('dotenv').config();
 // dotenv.config();
@@ -22,3 +26,4 @@ module.exports = function (req, res, next) {
     res.status(401).json({ msg: 'invalid Token' });
   }
 };
+

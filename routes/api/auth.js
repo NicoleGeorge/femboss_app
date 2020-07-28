@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../../middleware/auth');
 
 // access workflow
 // @route           GET api/auth
@@ -7,6 +8,6 @@ const router = express.Router();
 // @access          Public
 
 
-router.get('/', (req, res) => res.send('Auth route'));
+router.get('/', auth, (req, res) => res.send('Auth route'));
 
 module.exports = router;

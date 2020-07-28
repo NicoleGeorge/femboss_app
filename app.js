@@ -3,27 +3,26 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-
+const connectDB = require('./config/db');
 const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
 // configuring the db
+connectDB();
+// mongoose
+//   .connect(process.env.MONGO_URI, {
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true,
+//     useCreateIndex: true
+//   })
+//   .then(() => {
+//     console.log('DB Connected');
 
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true
-  })
-  .then(() => {
-    console.log('DB Connected');
-
-    mongoose.connection.on('err', (err) => {
-      console.log(`DB connection error: ${err.message}`);
-    });
-  });
-
+//     mongoose.connection.on('err', (err) => {
+//       console.log(`DB connection error: ${err.message}`);
+//     });
+//   });
 
 //   MIDDLEWARE
 // 1. morgan - monitoring loading of app

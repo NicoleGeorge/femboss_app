@@ -8,8 +8,11 @@ const gravatar = require('gravatar');
 // bcrypt
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const config = require('config');
 // const expressJwt = require('express-jwt');
-require('dotenv').config();
+const dotenv = require('dotenv');
+// require('dotenv').config();
+dotenv.config();
 
 // user access workflow
 // @route           POST api/users
@@ -38,7 +41,7 @@ router.post(
       if (user) {
         return res
           .status(400)
-          .json({ error: [{ msge: 'User already exists' }] });
+          .json({ error: [{ msg: 'User already exists' }] });
       }
 
       const avatar = gravatar.url(email, {
@@ -71,14 +74,17 @@ router.post(
         },
       };
 
-      jwt.sign(payload, process.env.JWT_SECRET),
+      jwt.sign(
+        payload,
+        config.get('jwtSecret'),
         { expiresIn: 360000 },
         (err, token) => {
           if (err) throw err;
           res.json({ token });
-        };
+        }
+      );
 
-      res.send('User registered');
+      //   res.send('User registered');
     } catch (error) {
       console.error(err.message);
       res.status(500).send('Server error');

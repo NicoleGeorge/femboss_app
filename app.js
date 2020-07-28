@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 
@@ -13,6 +14,7 @@ mongoose
   .connect(process.env.MONGO_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
+    useCreateIndex: true
   })
   .then(() => {
     console.log('DB Connected');
@@ -29,8 +31,9 @@ app.use(morgan('dev'));
 // 2. body-parser (pull data from create post req.body in controller -> json format)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// /3.
 
+// 3. cookie-parser
+app.use(cookieParser());
 
 // ROUTES
 

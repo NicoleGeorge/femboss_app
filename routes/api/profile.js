@@ -76,8 +76,41 @@ router.post(
     if (skills) {
       profileFields.skills = skills.split(',').map((skill) => skill.trim());
     }
-    console.log(profileFields.skills);
-    res.send('Hello');
+
+    // Creaste socials object
+    profileFields.socials = {};
+    if (instagram) profileFields.socials.instagram = instagram;
+    if (linkedin) profileFields.socials.linkedin = linkedin;
+    if (youtube) profileFields.socials.youtube = youtube;
+    if (twitter) profileFields.socials.twitter = twitter;
+    if (facebook) profileFields.socials.facebook = facebook;
+
+    // console.log(profileFields.skills); - working...woot-woot
+    // res.send('Hello, '); working!!
+
+    try {
+      let profile = await Profile.findOne({ user: req.user.id });
+
+      if (profile) {
+        //updating user profile
+        profile = await Profile.findOneAndUpdate(
+          { user: req.user.id },
+          { $set: profileFields },
+          { new: true }
+        );
+
+        return res.json(profile);
+      }
+
+      //create user profile
+      profile = new Profile(profileFields);
+
+      await profile.save();
+      res.json(profile);
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send('Server Error');
+    }
   }
 );
 

@@ -215,4 +215,48 @@ router.post(
   }
 );
 
+// user delete comment on Posts workflow
+// @route           POST api/posts/comment/:id/:comment_id
+// @description     Delete comment on a Post
+// @access          Private
+
+router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    // get the comment from the post
+
+    const comment = post.comments.find(
+      (comment) => comment.id === req.params.comment_id
+    );
+
+    // validate the comment exists
+
+    if (!comment) {
+      return res.status(404).json({ msg: 'Comment does not exist' });
+    }
+
+    // checking that ONLY the user who made the comment can delete it
+    if (comment.user.toString() !== req.user.id) {
+      return res
+        .status(401)
+        .json({ msg: 'You are not authorised to delete this post' });
+    }
+
+    // get the remove index
+    const deleteIndex = post.comments
+      .map((comment) => comment.user.toString())
+      .indexOf(req.user.id);
+
+    post.comments.splice(deleteIndex, 1);
+
+    await post.save();
+
+    res.json(post.comments);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;

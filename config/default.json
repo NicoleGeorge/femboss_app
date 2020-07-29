@@ -1,4 +1,6 @@
 {
-    "mongoURI" : "mongodb+srv://nicoleg83:eDDKwVAW5kqR67JL@femboss.bsl0l.mongodb.net/nicoleg83?retryWrites=true&w=majority",
-    "jwtSecret" : "JWT_SECRET = NLNLNCLANCLFRHUEORHBAADFEFJNBNKKHERLE"
+  "mongoURI": "mongodb+srv://nicoleg83:eDDKwVAW5kqR67JL@femboss.bsl0l.mongodb.net/nicoleg83?retryWrites=true&w=majority",
+  "jwtSecret": "JWT_SECRET = NLNLNCLANCLFRHUEORHBAADFEFJNBNKKHERLE",
+  "githubClientId": "632ade0be9760a736cbc",
+  "githubClientSecret": "0ed513d5c2f9ae4d7066e7cfab1ed94f03b4967f"
 }

@@ -144,36 +144,37 @@ router.put('/like/:id', auth, async (req, res) => {
   }
 });
 
-
 // unlike a  user's Post workflow
-// @route           PUT api/posts//like/:id
+// @route           PUT api/posts/unlikelike/:id
 // @description     Like a Post
 // @access          Private
 
-router.put('/like/:id', auth, async (req, res) => {
-    try {
-      const post = await Post.findById(req.params.id);
-  
-      //  check if a user has alrady like a post ==> so it doens't keep incrementing
-      if (
-        post.likes.filter((like) => like.user.toString() === req.user.id).length >
-        0
-      ) {
-        return res.status(400).json({ msg: 'Post has been liked' });
-      }
-  
-      // .unshift() ==> pushes dsata to the top of the array
-      post.likes.unshift({ user: req.user.id });
-  
-      await post.save();
-  
-      res.json(post.likes);
-    } catch (error) {
-      console.error(error.message);
-      res.status(500).send('Server Error');
+router.put('/unlike/:id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    //  check if a user has alrady like a post ==> so it doens't keep incrementing
+    if (
+      post.likes.filter((like) => like.user.toString() === req.user.id)
+        .length === 0
+    ) {
+      return res.status(400).json({ msg: 'Post has not been liked' });
     }
-  });
 
+    // get the remove index
+    const deleteIndex = post.likes
+      .map((like) => like.user.toString())
+      .indexOf(req.user.id);
 
+    post.likes.splice(deleteIndex, 1);
+
+    await post.save();
+
+    res.json(post.likes);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 module.exports = router;

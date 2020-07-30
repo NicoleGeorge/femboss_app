@@ -235,6 +235,12 @@ img {
 }
 
 /* Forms */
+
+.join-hero {
+  position: relative;
+  background: url('./img/login-hero\ \(1\).png') no-repeat center/cover;
+  /* height: 100vh; */
+}
 .form .form-group {
   margin: 1.2rem 0;
 }
@@ -252,7 +258,7 @@ img {
 .form select,
 .form textarea {
   display: block;
-  width: 100%;
+  width: 40%;
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
@@ -532,6 +538,19 @@ button {
     display: none;
   }
 
+  /* form */
+  .form input[type='text'],
+  .form input[type='email'],
+  .form input[type='password'],
+  .form input[type='date'],
+  .form select,
+  .form textarea {
+    display: block;
+    width: 60%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+  }
   /* Profiles Page */
   .profile {
     grid-template-columns: 1fr;

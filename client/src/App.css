@@ -238,8 +238,8 @@ img {
 
 .join-hero {
   position: relative;
-  background: url('./img/login-hero\ \(1\).png') no-repeat center/cover;
-  /* height: 100vh; */
+  background: url('./img/login-hero.png') no-repeat center/cover;
+  height: 50vh;
 }
 .form .form-group {
   margin: 1.2rem 0;

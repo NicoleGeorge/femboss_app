@@ -1,11 +1,11 @@
 /* Global Styles */
 :root {
   --primary-color: #fff063;
-  --highlight-color:  #c59dd3;
+  --highlight-color: #c59dd3;
   --dark-color: #000101;
   --light-color: #fee1e3;
-  --danger-color: #FF87C5;
-  --success-color: #06AD59;
+  --danger-color: #ff87c5;
+  --success-color: #06ad59;
 }
 
 * {
@@ -320,7 +320,6 @@ button {
   color: var(--dark-color);
   padding: 0.45rem;
   margin: 0 0.25rem;
-
 }
 
 .navbar a:hover {

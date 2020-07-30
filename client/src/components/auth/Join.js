@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
+// import axios from 'axios';
 
-export const Join = () => {
+const Join = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,24 +28,27 @@ export const Join = () => {
     if (password !== passwordConfirm) {
       console.log('passwords do not match');
     } else {
-      const newUser = {
-        name,
-        email,
-        password,
-      };
-      try {
-        const config = {
-          headers: {
-            'Content-type': 'application/json'
-          }
-        }
-        const body = JSON.stringify(newUser);
-        const res = await axios.post('/api/users', body, config); 
-        console.log(res.data);
-      } catch (error) {
-        console.error(error.response.data);
-      }
-    }
+console.log('successfully logged in');
+        // can successfully access the backend database!!
+
+    //   const newUser = {
+    //     name,
+    //     email,
+    //     password,
+    //   };
+    //   try {
+    //     const config = {
+    //       headers: {
+    //         'Content-type': 'application/json'
+    //       }
+    //     }
+    //     const body = JSON.stringify(newUser);
+    //     const res = await axios.post('/api/users', body, config); 
+    //     console.log(res.data);
+    //   } catch (error) {
+    //     console.error(error.response.data);
+    //   }
+      }  // }
   };
 
   return (
@@ -99,10 +103,10 @@ export const Join = () => {
               minLength='6'
             />
           </div>
-          <input type='submit' className='btn btn-primary' value='Register' />
+          <input type='submit' className='btn btn-primary' value='Join' />
         </form>
         <p className='my-1'>
-          Already have an account? <a href='login.html'>Sign In</a>
+          Already a femBOS member? <Link to='/login'>login</Link>
         </p>
       </section>
     </Fragment>

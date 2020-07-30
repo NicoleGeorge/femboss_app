@@ -59,8 +59,10 @@ img {
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  width: 40%;
+  text-align: justify;
 }
 
 .text-center {
@@ -129,7 +131,7 @@ img {
 
 .btn {
   display: inline-block;
-  background: var(--light-color);
+  background: var(--dark-color);
   color: #333;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
@@ -165,6 +167,21 @@ img {
   color: #fff;
 }
 
+.btn-nav{
+  background: var(--dark-color);
+  color: #fff !important;
+  padding: 0.6rem 1.5rem !important;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in !important; 
+}
+
+.btn-nav-member {
+  background: none;
+  color: black !important;
+}
+
+
 .btn-light,
 .bg-light,
 .badge-light,
@@ -174,7 +191,7 @@ img {
 }
 
 .btn-dark,
-.bg-dark,
+.nav-primary,
 .badge-dark,
 .alert-dark {
   background: var(--primary-color);
@@ -318,6 +335,10 @@ button {
   /* opacity: 0.9; */
 }
 
+.navbar-logo {
+  font-size: 2.rem;
+  font-weight: 600;
+}
 .navbar ul {
   display: flex;
 }
@@ -326,7 +347,9 @@ button {
   color: var(--dark-color);
   padding: 0.45rem;
   margin: 0 0.25rem;
+
 }
+
 
 .navbar a:hover {
   color: var(--highlight-color);
@@ -517,6 +540,7 @@ button {
 
   .lead {
     font-size: 1rem;
+    width: 90%;
   }
 
   /* Navbar */
@@ -524,6 +548,7 @@ button {
     display: block;
     text-align: center;
   }
+
 
   .navbar ul {
     text-align: center;

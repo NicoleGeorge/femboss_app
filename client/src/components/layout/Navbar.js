@@ -2,21 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 export const Navbar = () => {
   return (
-    <nav className='navbar bg-dark'>
-      <h1>
+    <nav className='navbar nav-primary'>
+      <h1 className="navbar-logo">
         <Link to='/'>
           <i className='fab fa-angellist'></i> femBOSS
         </Link>
       </h1>
       <ul>
         <li>
-          <a href='!#'>Members</a>
+          <Link className='btn btn-nav btn-nav-member' to='!#'>Members</Link>
         </li>
         <li>
-          <Link to='/join'>Join</Link>
+          <Link className='btn btn-nav' to='/join'>Join</Link>
         </li>
         <li>
-          <Link to='/login'>Log in</Link>
+          <Link className='btn btn-nav' to='/login'>Log in</Link>
         </li>
       </ul>
     </nav>

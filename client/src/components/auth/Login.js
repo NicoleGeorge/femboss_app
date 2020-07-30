@@ -27,7 +27,7 @@ import { Link } from 'react-router-dom';
       <section className='join-hero'>
         <h1 className='large text-primary '>Login</h1>
         <p className='lead'>
-          <i className='fas fa-magic'></i> Login to your account
+        <i class="fas fa-hand-sparkles"></i> Hi, welcome back!
         </p>
         <form className='form' onSubmit={(e) => onSubmit(e)}>
           <div className='form-group'>

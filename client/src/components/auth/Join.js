@@ -79,8 +79,8 @@ console.log('successfully logged in');
               required
             />
             <small className='form-text'>
-              This site uses Gravatar so if you want a profile image, use a
-              Gravatar email
+              For a profile image, use a
+              Gravatar email.
             </small>
           </div>
           <div className='form-group'>

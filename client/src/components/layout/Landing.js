@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export const Landing = () => {
   return (
     <section className='landing'>
@@ -10,12 +10,12 @@ export const Landing = () => {
             femBOSS is a social network for ambitious #womenInTech.
           </p>
           <div className='buttons'>
-            <a href='register.html' className='btn btn-primary'>
+            <Link to='/join' className='btn btn-primary'>
               Join
-            </a>
-            <a href='login.html' className='btn btn-light'>
+            </Link>
+            <Link to='/login' className='btn btn-light'>
               Log in
-            </a>
+            </Link>
           </div>
         </div>
       </div>

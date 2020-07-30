@@ -1,22 +1,22 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export const Navbar = () => {
   return (
     <nav className='navbar bg-dark'>
       <h1>
-        <a href='index.html'>
+        <Link to='/'>
           <i className='fab fa-angellist'></i> femBOSS
-        </a>
+        </Link>
       </h1>
       <ul>
         <li>
-          <a href='profiles.html'>Members</a>
+          <a href='!#'>Members</a>
         </li>
         <li>
-          <a href='register.html'>Join</a>
+          <Link to='/join'>Join</Link>
         </li>
         <li>
-          <a href='login.html'>Log in</a>
+          <Link to='/login'>Log in</Link>
         </li>
       </ul>
     </nav>

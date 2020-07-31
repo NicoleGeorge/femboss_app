@@ -24,7 +24,7 @@ export default function (state = initialState, action) {
         user: payload,
       };
     case JOIN_SUCCESS:
-      localStorage.setItem('token', payload.token); //setting the user's login token to local storage
+      localStorage.setItem('token', payload.token);
       return {
         ...state,
         ...payload,

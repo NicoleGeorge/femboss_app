@@ -12,7 +12,7 @@ import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
-import { setAlert } from './actions/alert';
+// import { setAlert } from './actions/alert';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);

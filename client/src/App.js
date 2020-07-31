@@ -4,6 +4,8 @@ import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Join from './components/auth/Join';
 import Login from './components/auth/Login';
+import Alert from './components/layout/Alert';
+
 
 // Adding Redux
 
@@ -19,6 +21,7 @@ const App = () => (
         <Navbar />
         <Route exact path='/' component={Landing} />
         <section className='container'>
+          <Alert />
           <Switch>
             <Route exact path='/join' component={Join} />
             <Route exact path='/login' component={Login} />

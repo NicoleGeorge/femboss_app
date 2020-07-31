@@ -1,8 +1,12 @@
 import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setAlert } from '../../actions/alert';
+import PropTypes from 'prop-types';
+
 // import axios from 'axios';
 
-const Join = () => {
+const Join = ({ setAlert }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,29 +30,29 @@ const Join = () => {
     // validating paswords => making sure they both match
 
     if (password !== passwordConfirm) {
-      console.log('passwords do not match');
+      setAlert('passwords do not match', 'danger');
     } else {
-console.log('successfully logged in');
-        // can successfully access the backend database!!
+      console.log('successfully logged in');
+      // can successfully access the backend database!!
 
-    //   const newUser = {
-    //     name,
-    //     email,
-    //     password,
-    //   };
-    //   try {
-    //     const config = {
-    //       headers: {
-    //         'Content-type': 'application/json'
-    //       }
-    //     }
-    //     const body = JSON.stringify(newUser);
-    //     const res = await axios.post('/api/users', body, config); 
-    //     console.log(res.data);
-    //   } catch (error) {
-    //     console.error(error.response.data);
-    //   }
-      }  // }
+      //   const newUser = {
+      //     name,
+      //     email,
+      //     password,
+      //   };
+      //   try {
+      //     const config = {
+      //       headers: {
+      //         'Content-type': 'application/json'
+      //       }
+      //     }
+      //     const body = JSON.stringify(newUser);
+      //     const res = await axios.post('/api/users', body, config);
+      //     console.log(res.data);
+      //   } catch (error) {
+      //     console.error(error.response.data);
+      //   }
+    } // }
   };
 
   return (
@@ -79,8 +83,7 @@ console.log('successfully logged in');
               required
             />
             <small className='form-text'>
-              For a profile image, use a
-              Gravatar email.
+              For a profile image, use a Gravatar email.
             </small>
           </div>
           <div className='form-group'>
@@ -113,4 +116,7 @@ console.log('successfully logged in');
   );
 };
 
-export default Join;
+Join.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+};
+export default connect(null, { setAlert })(Join);

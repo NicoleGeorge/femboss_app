@@ -2,11 +2,12 @@ import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
+import { join } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
 // import axios from 'axios';
 
-const Join = ({ setAlert }) => {
+const Join = ({ setAlert, join }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,7 +33,7 @@ const Join = ({ setAlert }) => {
     if (password !== passwordConfirm) {
       setAlert('passwords do not match', 'danger');
     } else {
-      console.log('successfully logged in');
+      join({ name, email, password });
       // can successfully access the backend database!!
 
       //   const newUser = {
@@ -70,7 +71,7 @@ const Join = ({ setAlert }) => {
               name='name'
               vale={name}
               onChange={(e) => onChange(e)}
-              required
+            //   required
             />
           </div>
           <div className='form-group'>
@@ -80,7 +81,7 @@ const Join = ({ setAlert }) => {
               name='email'
               vale={email}
               onChange={(e) => onChange(e)}
-              required
+            //   required
             />
             <small className='form-text'>
               For a profile image, use a Gravatar email.
@@ -93,7 +94,7 @@ const Join = ({ setAlert }) => {
               name='password'
               vale={password}
               onChange={(e) => onChange(e)}
-              minLength='6'
+            //   minLength='6'
             />
           </div>
           <div className='form-group'>
@@ -103,7 +104,7 @@ const Join = ({ setAlert }) => {
               name='passwordConfirm'
               value={passwordConfirm}
               onChange={(e) => onChange(e)}
-              minLength='6'
+            //   minLength='6'
             />
           </div>
           <input type='submit' className='btn btn-primary' value='Join' />
@@ -118,5 +119,6 @@ const Join = ({ setAlert }) => {
 
 Join.propTypes = {
   setAlert: PropTypes.func.isRequired,
+  join: PropTypes.func.isRequired,
 };
-export default connect(null, { setAlert })(Join);
+export default connect(null, { setAlert, join })(Join);

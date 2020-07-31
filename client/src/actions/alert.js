@@ -1,4 +1,4 @@
-import { SET_ALERT, REMOVE_ALERT } from './constants';
+import { SET_ALERT, REMOVE_ALERT } from './types';
 import { v4 as uuidv4 } from 'uuid';
 // incorporating the 'thunk' middleware
 export const setAlert = (msg, alertType, timeout = 5000) => (dispatch) => {

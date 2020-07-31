@@ -2,22 +2,22 @@ import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
-import { join } from '../../actions/auth';
+import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
 // import axios from 'axios';
 
-const Join = ({ setAlert, join }) => {
+const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
-    passwordConfirm: '',
+    password2: '',
   });
 
   // destructure the state
 
-  const { name, email, password, passwordConfirm } = formData;
+  const { name, email, password, password2 } = formData;
 
   //   update the name, use the spread operator to copy formData, change name to the value of the input
   const onChange = (e) =>
@@ -30,10 +30,10 @@ const Join = ({ setAlert, join }) => {
 
     // validating paswords => making sure they both match
 
-    if (password !== passwordConfirm) {
+    if (password !== password2) {
       setAlert('passwords do not match', 'danger');
     } else {
-      join({ name, email, password });
+      register({ name, email, password });
       // can successfully access the backend database!!
 
       //   const newUser = {
@@ -101,8 +101,8 @@ const Join = ({ setAlert, join }) => {
             <input
               type='password'
               placeholder='Confirm Password'
-              name='passwordConfirm'
-              value={passwordConfirm}
+              name='password2'
+              value={password2}
               onChange={(e) => onChange(e)}
             //   minLength='6'
             />
@@ -117,8 +117,8 @@ const Join = ({ setAlert, join }) => {
   );
 };
 
-Join.propTypes = {
+Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  join: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
 };
-export default connect(null, { setAlert, join })(Join);
+export default connect(null, { setAlert, register })(Register);

@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { setAlert } from './alert';
 import {
-  JOIN_SUCCESS,
-  JOIN_FAIL,
+  REGISTER_SUCCESS,
+  REGISTER_FAIL,
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
-} from './constants';
+} from './types';
 import setAuthToken from '../utils/setAuthToken';
 
 //  Load a user
@@ -32,7 +32,7 @@ export const loadUser = () => async (dispatch) => {
 
 // Register a user user
 
-export const join = ({ name, email, password }) => async (dispatch) => {
+export const register = ({ name, email, password }) => async (dispatch) => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export const join = ({ name, email, password }) => async (dispatch) => {
     const res = await axios.post('/api/users', body, config);
 
     dispatch({
-      type: JOIN_SUCCESS,
+      type: REGISTER_SUCCESS,
       payload: res.data,
     });
   } catch (err) {
@@ -55,7 +55,7 @@ export const join = ({ name, email, password }) => async (dispatch) => {
       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
     }
     dispatch({
-      type: JOIN_FAIL,
+      type: REGISTER_FAIL,
     });
   }
 };

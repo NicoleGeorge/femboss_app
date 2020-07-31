@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
-import Join from './components/auth/Join';
+import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 // Adding Redux
@@ -20,7 +20,7 @@ if (localStorage.token) {
 
 const App = () => {
   useEffect(() => {
-    store.dispatch(loadUser);
+    store.dispatch(loadUser());
   }, []); //[] = so it only runs/mounts once => replaces the componentDidMount() as I'm using functions instead
   return (
     <Provider store={store}>
@@ -31,7 +31,7 @@ const App = () => {
           <section className='container'>
             <Alert />
             <Switch>
-              <Route exact path='/join' component={Join} />
+              <Route exact path='/join' component={Register} />
               <Route exact path='/login' component={Login} />
             </Switch>
           </section>

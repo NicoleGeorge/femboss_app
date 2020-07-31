@@ -3,7 +3,9 @@ import {
   JOIN_FAIL,
   USER_LOADED,
   AUTH_ERROR,
-} from '../actions/constants';
+  REGISTER_SUCCESS,
+  REGISTER_FAIL
+} from '../actions/types';
 
 const initialState = {
   token: localStorage.getItem('token'),
@@ -23,7 +25,7 @@ export default function (state = initialState, action) {
         loading: false,
         user: payload,
       };
-    case JOIN_SUCCESS:
+    case REGISTER_SUCCESS:
       localStorage.setItem('token', payload.token);
       return {
         ...state,
@@ -31,7 +33,7 @@ export default function (state = initialState, action) {
         isAuthenticated: true,
         loading: false,
       };
-    case JOIN_FAIL:
+    case REGISTER_FAIL:
     case AUTH_ERROR:
       localStorage.removeItem('token');
       return {

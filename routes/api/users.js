@@ -27,7 +27,7 @@ router.post(
     check(
       'password',
       'Please enter a password with 8 or more characters'
-    ).isLength({ min: 8 }),
+    ).isLength({ min: 6 }),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -52,7 +52,7 @@ router.post(
       // creating a new user
       user = new User({
         name,
-        email,
+        email, 
         avatar,
         password,
       });
@@ -85,7 +85,7 @@ router.post(
       );
 
       //   res.send('User registered');
-    } catch (error) {
+    } catch (err) {
       console.error(err.message);
       res.status(500).send('Server error');
     }

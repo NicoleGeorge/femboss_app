@@ -76,7 +76,7 @@ const EditProfile = ({
     <Fragment>
       <h1 className='large'>About Me</h1>
       <p className='lead'>
-        <i className='fas fa-user-astronaut'></i> Help others know what you can
+        <i className='fas fa-hat-wizard'></i> Help others know what you can
         offer and how they can help.
       </p>
       <small>* = required field</small>

@@ -93,7 +93,7 @@ export const addExperience = (formData, history) => async (dispatch) => {
 
 // Create or update a user's EDUCATION
 
-export const addEucation = (formData, history) => async (dispatch) => {
+export const addEducation = (formData, history) => async (dispatch) => {
   try {
     const config = {
       headers: {

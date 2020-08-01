@@ -26,7 +26,7 @@ const Experience = ({ experience, deleteExperience }) => {
 
   return (
     <Fragment>
-      <h2 className='my-2'>My Experience Journey</h2>
+      <h2 className='my-2'>My Experience</h2>
       <table className='table'>
         <thead>
           <tr>

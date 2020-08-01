@@ -1,4 +1,4 @@
-/* Global Styles */
+/* GLOBAL STYLES */
 :root {
   --primary-color: #fff063;
   --highlight-color: #c59dd3;
@@ -7,6 +7,8 @@
   --danger-color: #ff87c5;
   --success-color: #06ad59;
 }
+
+/* BASE STYLES */
 
 * {
   box-sizing: border-box;
@@ -37,7 +39,6 @@ img {
   width: 100%;
 }
 
-/* Utilities */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -257,7 +258,7 @@ img {
 
 .join-hero {
   position: relative;
-  background: url('./img/login-hero.png') no-repeat center/cover;
+  background: url('./img/login-hero-pink.png') no-repeat center/cover;
   height: 50vh;
 }
 .form .form-group {

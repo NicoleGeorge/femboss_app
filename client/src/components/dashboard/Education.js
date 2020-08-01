@@ -24,14 +24,14 @@ const Education = ({ education }) => {
 
   return (
     <Fragment>
-      <h2 className='my-2'>Education Credentials</h2>
+      <h2 className='my-2'>My Education Journey</h2>
       <table className='table'>
         <thead>
           <tr>
             <th>School</th>
             <th className='hide-sm'>Accreditation</th>
             <th className='hide-sm'>Years</th>
-            <th className='hide-sm'></th>
+            <th className='hide-sm'>Remove</th>
           </tr>
         </thead>
         <tbody>{educations}</tbody>

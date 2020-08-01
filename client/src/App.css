@@ -13,7 +13,9 @@
   margin: 0;
   padding: 0;
 }
-
+text {
+  font-family: 'Inconsolata', monospace;
+}
 body {
   font-family: 'Inconsolata', monospace;
   font-size: 1rem;
@@ -280,6 +282,20 @@ img {
   font-size: 1.2rem;
   border: 1px solid #ccc;
 }
+
+.form-profile input[type='text'],
+.form-profile input[type='email'],
+.form-profile input[type='password'],
+.form-profile input[type='date'],
+.form-profile select,
+.form-profile textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
 
 .form input[type='submit'],
 button {

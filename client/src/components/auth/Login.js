@@ -44,7 +44,7 @@ const Login = ({ login, isAuthenticated }) => {
               name='email'
               vale={email}
               onChange={(e) => onChange(e)}
-              required
+              // required
             />
           </div>
           <div className='form-group'>
@@ -54,7 +54,7 @@ const Login = ({ login, isAuthenticated }) => {
               name='password'
               vale={password}
               onChange={(e) => onChange(e)}
-              minLength='6'
+              // minLength='6'
             />
           </div>
           <input type='submit' className='btn btn-primary' value='Login' />

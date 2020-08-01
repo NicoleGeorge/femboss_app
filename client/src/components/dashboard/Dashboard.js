@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
+import { DashboardActions } from './DashboardActions';
 import { getCurrentProfile } from '../../actions/profile';
 
 const Dashboard = ({
@@ -22,15 +23,17 @@ const Dashboard = ({
         <i className='fas fa-hand-sparkles'> Hello {user && user.name}</i>
       </p>
       {profile !== null ? (
-        <Fragment>has</Fragment>
+        <Fragment>
+          <DashboardActions />
+        </Fragment>
       ) : (
         <Fragment>
           <p>
-            Hey femBOSS, we noticed you haven't created a profile
-            yet. No biggie, but if you would like to makw the most of femBOSS,
-            we'd love to know a bit more about you. Head over to the link below
-            to get started!
-            <Link to='/create-profile' className='btn btn-primary'>create profile</Link>
+            Hey femBOSS, we noticed you haven't created a profile yet. No
+            biggie, just head over to the link below to get started!
+            <Link to='/create-profile' className='btn btn-primary'>
+              create profile
+            </Link>
           </p>
         </Fragment>
       )}

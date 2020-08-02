@@ -50,11 +50,11 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-      <li>
+      {/* <li>
         <Link className='btn btn-nav btn-nav-member' to='/profiles'>
           Members
         </Link>
-      </li>
+      </li> */}
       <li>
         <Link className='btn btn-nav' to='/join'>
           Join

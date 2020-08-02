@@ -6,14 +6,17 @@ import { getProfileById } from '../../actions/profile';
 
 const Profile = ({
   getProfileById,
-  propfile: { profile, loading },
+  profile: { profile, loading },
   auth,
   match,
 }) => {
   useEffect(() => {
     getProfileById(match.params.id);
   }, [getProfileById]);
-  return <div>profile</div>;
+
+  return <Fragment>
+    {profile === null || loading ? <Spinner /> : <Fragment>profile</Fragment> }
+  </Fragment>;
 };
 
 Profile.propTypes = {
@@ -22,7 +25,7 @@ Profile.propTypes = {
   auth: PropTypes.object.isRequired,
 };
 
-mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
   profile: state.profile,
   auth: state.auth,
 });

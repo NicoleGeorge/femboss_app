@@ -18,20 +18,17 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Fragment>
           <h1 className='large text-primary'>Members</h1>
           <p className='lead'>
-            <i className='fas fa-user-astronaut'></i> Join forces, collaborate,
-            launch projects...become a femBOSS!
+          <i className='fas fa-user-astronaut'></i> Join forces, collaborate &
+            launch projects!
           </p>
-          <div className='profiles'>
-            {profiles.length > 0 ? (
-              profiles.map((profile) => (
-                <ProfileItem key={profile._id} profile={profile} />
-              ))
-            ) : (
-              <h4>No profiles found...</h4>
-            )}
-          </div>
+          {/* <div className="profiles">
+            {profiles.length > 0 ? ( profiles.map(profile => (
+              <ProfileItem key={profile._id} profile={profile}  />
+            ))) : <h4>No profiles found</h4>}
+          </div> */}
         </Fragment>
       )}
+      <Fragment>profile</Fragment>
     </Fragment>
   );
 };

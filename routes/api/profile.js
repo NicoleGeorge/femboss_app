@@ -4,7 +4,7 @@ const config = require('config');
 const router = express.Router();
 const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator/check');
-
+const checkObjectId = require('../../middleware/checkObjectId');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
@@ -120,7 +120,7 @@ router.post(
 // @description     Get all user profile
 // @access          Public
 
-router.get('/', async (req, res) => {
+router.get('/', checkObjectId('user_id'), async (req, res) => {
   try {
     const profiles = await Profile.find().populate('user', ['name', 'avatar']);
     res.json(profiles);
@@ -131,7 +131,7 @@ router.get('/', async (req, res) => {
 });
 
 // @route           GET api/profile/:user_id
-// @description     Get user profile by iserid
+// @description     Get user profile by userid
 // @access          Public
 
 router.get('/user/:user_id', async (req, res) => {

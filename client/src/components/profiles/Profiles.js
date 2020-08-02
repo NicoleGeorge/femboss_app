@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profile';
+import { Link } from 'react-router-dom';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -21,11 +22,14 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           <i className='fas fa-user-astronaut'></i> Join forces, collaborate &
             launch projects!
           </p>
-          {/* <div className="profiles">
+          <Link to="/" className="btn btn-primary">
+        Back to dashboard
+      </Link>
+          <div className="profiles">
             {profiles.length > 0 ? ( profiles.map(profile => (
               <ProfileItem key={profile._id} profile={profile}  />
             ))) : <h4>No profiles found</h4>}
-          </div> */}
+          </div>
         </Fragment>
       )}
       <Fragment>profile</Fragment>

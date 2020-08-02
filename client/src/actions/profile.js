@@ -52,10 +52,10 @@ export const getProfiles = () => async (dispatch) => {
 
 // get all user profiles by :id ===> profile page of another user will load
 
-export const getProfileById = (userId) => async (dispatch) => {
+export const getProfileById = (user_id) => async (dispatch) => {
   // making the request to the backend
   try {
-    const res = await axios.get(`/api/profile/user/${userId}`);
+    const res = await axios.get(`/api/profile/user/${user_id}`);
 
     dispatch({
       type: GET_PROFILE,

@@ -1,5 +1,5 @@
 # femboss_app
 
-* Built for Cognitively Fearless Females [Membership support]() 
-* Based on Traversy Media [lecture series]()
-* Modeled on the GirlBoss [social network]()
+* Built for Cognitively Fearless Females - femBOSS Membership tier
+* Based on Traversy Media [lecture series](https://www.udemy.com/)
+* Modeled off the GirlBoss [social network](https://www.girlboss.com/)

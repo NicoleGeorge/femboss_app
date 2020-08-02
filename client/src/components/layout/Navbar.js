@@ -8,6 +8,30 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
+        <Link className='btn btn-nav btn-nav-member' to='/profiles'>
+          <i class='fas fa-code-branch'></i>
+          <span className='hide-sm'> Members</span>
+        </Link>
+      </li>
+      <li>
+        <Link className='btn btn-nav btn-nav-member' to='/profiles'>
+          <i className='fas fa-comments'></i>{' '}
+          <span className='hide-sm'> Forum</span>
+        </Link>
+      </li>
+      <li>
+        <Link className='btn btn-nav btn-nav-member' to='/profiles'>
+          <i className='fas fa-video'></i>{' '}
+          <span className='hide-sm'> Virtual CoWorking</span>
+        </Link>
+      </li>
+      <li>
+        <Link className='btn btn-nav btn-nav-member' to='/profiles'>
+          <i class='fas fa-link'></i>
+          <span className='hide-sm'> Resources</span>
+        </Link>
+      </li>
+      <li>
         <Link className='btn btn-nav btn-nav-member' to='dashboard'>
           <i className='fas fa-user-astronaut'></i>
           {''}
@@ -27,7 +51,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link className='btn btn-nav btn-nav-member' to='#!'>
+        <Link className='btn btn-nav btn-nav-member' to='/profiles'>
           Members
         </Link>
       </li>

@@ -6,8 +6,9 @@ import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
+import ProfileGithub from './ProfileGithub';
 import { getProfileById } from '../../actions/profile';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 
 const Profile = ({
   getProfileById,
@@ -25,17 +26,9 @@ const Profile = ({
         <Spinner />
       ) : (
         <Fragment>
-          <Link to='/profiles' className='btn btn-primary'>
-            Back to Members
-          </Link>
 
-          {auth.isAuthenticated &&
-            auth.loading === false &&
-            auth.user._id === profile.user._id && (
-              <Link to='/edit-profile' className='btn btn-dark'>
-                Edit profile
-              </Link>
-            )}
+
+
 
           <div className='profile-grid my-1'>
             <ProfileTop profile={profile} />
@@ -60,7 +53,7 @@ const Profile = ({
               {profile.education.length > 0 ? (
                 <Fragment>
                   {profile.education.map((education) => (
-                    <ProfileExperience
+                    <ProfileEducation
                       key={education._id}
                       education={education}
                     />
@@ -70,7 +63,20 @@ const Profile = ({
                 <h4>No Education listed</h4>
               )}
             </div>
+            {profile.githubusername && (
+              <ProfileGithub username={profile.githubusername} />
+            )}
           </div>
+          <Link to='/profiles' className='btn btn-primary'>
+            Back to Members
+          </Link>
+          {auth.isAuthenticated &&
+            auth.loading === false &&
+            auth.user._id === profile.user._id && (
+              <Link to='/edit-profile' className='btn btn-primary'>
+                Edit profile
+              </Link>
+            )}
 
           {/* <div className='profile-edu bg-white p-2'>
       <h2 className='text-primary'>Education</h2>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import api from '../utils/api';
 import { setAlert } from './alert';
 
 import {
@@ -74,7 +75,7 @@ export const getProfileById = (user_id) => async (dispatch) => {
 export const getGithubRepos = (username) => async (dispatch) => {
   // making the request to the backend
   try {
-    const res = await axios.get(`/api/profile/github/${username}`);
+    const res = await api.get(`/profile/github/${username}`);
 
     dispatch({
       type: GET_REPOS,

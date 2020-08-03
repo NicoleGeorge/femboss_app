@@ -25,11 +25,11 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           <Link to="/" className="btn btn-primary">
         Back to dashboard
       </Link>
-          <div className="profiles">
+          {<div className="profiles">
             {profiles.length > 0 ? ( profiles.map(profile => (
               <ProfileItem key={profile._id} profile={profile}  />
             ))) : <h4>No profiles found</h4>}
-          </div>
+          </div>}
         </Fragment>
       )}
       <Fragment>profile</Fragment>

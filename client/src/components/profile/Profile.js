@@ -8,7 +8,7 @@ import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
 import ProfileGithub from './ProfileGithub';
 import { getProfileById } from '../../actions/profile';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 const Profile = ({
   getProfileById,
@@ -26,10 +26,6 @@ const Profile = ({
         <Spinner />
       ) : (
         <Fragment>
-
-
-
-
           <div className='profile-grid my-1'>
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
@@ -77,20 +73,6 @@ const Profile = ({
                 Edit profile
               </Link>
             )}
-
-          {/* <div className='profile-edu bg-white p-2'>
-      <h2 className='text-primary'>Education</h2>
-      {profile.education.length > 0 ? (
-        <Fragment>
-          {profile.education.map(education => (
-            <ProfileEducation key={education._id}
-            education={education} />
-          ))}
-        </Fragment>
-      ) : (
-        <h4>No education</h4>
-      )}
-    </div> */}
         </Fragment>
       )}
     </Fragment>

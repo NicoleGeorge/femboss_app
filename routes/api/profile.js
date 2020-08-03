@@ -4,7 +4,7 @@ const config = require('config');
 const router = express.Router();
 const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator/check');
-const checkObjectId = require('../../middleware/checkObjectId');
+// const checkObjectId = require('../../middleware/checkObjectId');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
@@ -120,15 +120,19 @@ router.post(
 // @description     Get all user profile
 // @access          Public
 
-router.get('/', checkObjectId('user_id'), async (req, res) => {
-  try {
-    const profiles = await Profile.find().populate('user', ['name', 'avatar']);
-    res.json(profiles);
-  } catch (error) {
-    console.error(error.message);
-    res.status(500).send('Server Error');
-  }
-});
+router.get('/'),
+  async (req, res) => {
+    try {
+      const profiles = await Profile.find().populate('user', [
+        'name',
+        'avatar',
+      ]);
+      res.json(profiles);
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send('Server Error');
+    }
+  };
 
 // @route           GET api/profile/:user_id
 // @description     Get user profile by userid
@@ -136,7 +140,7 @@ router.get('/', checkObjectId('user_id'), async (req, res) => {
 
 router.get('/user/:user_id', async (req, res) => {
   try {
-    const profile = await Profile.find({
+    const profile = await Profile.findOne({
       user: req.params.user_id,
     }).populate('user', ['name', 'avatar']);
 

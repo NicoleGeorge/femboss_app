@@ -23,7 +23,7 @@ const Dashboard = ({
     <Fragment>
       <h1 className='large text-primary'>Dashboard</h1>
       <p className='lead'>
-        <i className='fas fa-hand-sparkles'> Hello {user && user.name}</i>
+        <i className='fas fa-hand-sparkles'> Hello {user.name.trim().split(' ')[0]}</i>
       </p>
       {profile !== null ? (
         <Fragment>

@@ -22,26 +22,36 @@ const ProfileTop = ({
       <p>{location && <span>{location}</span>}</p>
       <div className='icons my-1'>
         {website && (
-          <Link to={website} target='_blank' rel='noopener noreferrer'>
+          <a href={website} target='_blank' rel='noopener noreferrer'>
             <i className='fas fa-globe fa-2x'></i>
-          </Link>
+          </a>
         )}
-        <a href='#' target='_blank' rel='noopener noreferrer'>
-          <i className='fab fa-twitter fa-2x'></i>
-        </a>
+        {socials && socials.twitter && (
+          <a href={socials.twitter} target='_blank' rel='noopener noreferrer'>
+            <i className='fab fa-twitter fa-2x'></i>
+          </a>
+        )}
 
-        <a href='#' target='_blank' rel='noopener noreferrer'>
-          <i className='fab fa-facebook fa-2x'></i>
-        </a>
-        <a href='#' target='_blank' rel='noopener noreferrer'>
-          <i className='fab fa-linkedin fa-2x'></i>
-        </a>
-        <a href='#' target='_blank' rel='noopener noreferrer'>
-          <i className='fab fa-youtube fa-2x'></i>
-        </a>
-        <a href='#' target='_blank' rel='noopener noreferrer'>
-          <i className='fab fa-instagram fa-2x'></i>
-        </a>
+        {socials && socials.facebook && (
+          <a href={socials.facebook} target='_blank' rel='noopener noreferrer'>
+            <i className='fab fa-facebook fa-2x'></i>
+          </a>
+        )}
+        {socials && socials.linkedin && (
+          <a href={socials.linkedin} target='_blank' rel='noopener noreferrer'>
+            <i className='fab fa-linkedin fa-2x'></i>
+          </a>
+        )}
+        {socials && socials.youtube && (
+          <a href={socials.youtube} target='_blank' rel='noopener noreferrer'>
+            <i className='fab fa-youtube fa-2x'></i>
+          </a>
+        )}
+        {socials && socials.instagram && (
+          <a href={socials.instagram} target='_blank' rel='noopener noreferrer'>
+            <i className='fab fa-instagram fa-2x'></i>
+          </a>
+        )}
       </div>
     </div>
   );

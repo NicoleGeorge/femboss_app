@@ -2,7 +2,9 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
-import ProfileTop from './ProfileTop'
+import ProfileTop from './ProfileTop';
+import ProfileAbout from './ProfileAbout';
+import ProfileExperience from './ProfileExperience';
 import { getProfileById } from '../../actions/profile';
 import { Link } from 'react-router-dom';
 
@@ -17,23 +19,44 @@ const Profile = ({
   }, [getProfileById, match.params.id]);
 
   return (
-  <Fragment>
-    {profile === null || loading ? <Spinner /> : <Fragment>
-      <Link to="/profiles" className="btn btn-primary">
-        Back to Members
-      </Link>
-      
-      {auth.isAuthenticated && auth.loading === false && auth.user._id === 
-      profile.user._id && (<Link to="/edit-profile" className="btn btn-dark">Edit profile</Link>)
-    } 
+    <Fragment>
+      {profile === null || loading ? (
+        <Spinner />
+      ) : (
+        <Fragment>
+          <Link to='/profiles' className='btn btn-primary'>
+            Back to Members
+          </Link>
 
-    <div className='profile-grid my-1'>
-      <ProfileTop profile={profile} />
+          {auth.isAuthenticated &&
+            auth.loading === false &&
+            auth.user._id === profile.user._id && (
+              <Link to='/edit-profile' className='btn btn-dark'>
+                Edit profile
+              </Link>
+            )}
 
-    </div>
+          <div className='profile-grid my-1'>
+            <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
+            <div class='profile-exp bg-white p-2'>
+              <h2 class='text-primary'>Experience</h2>
+              {profile.experience.length > 0 ? (
+                <Fragment>
+                  {profile.experience.map((experience) => (
+                    <ProfileExperience
+                      key={experience._id}
+                      experience={experience}
+                    />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No experience credentials</h4>
+              )}
+            </div>
+          </div>
 
-
-    {/* <div className='profile-edu bg-white p-2'>
+          {/* <div className='profile-edu bg-white p-2'>
       <h2 className='text-primary'>Education</h2>
       {profile.education.length > 0 ? (
         <Fragment>
@@ -46,12 +69,11 @@ const Profile = ({
         <h4>No education</h4>
       )}
     </div> */}
-
-
-    </Fragment> }
-  </Fragment>);
+        </Fragment>
+      )}
+    </Fragment>
+  );
 };
-
 
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,

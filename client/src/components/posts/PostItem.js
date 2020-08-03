@@ -6,40 +6,40 @@ import { connect } from 'react-redux';
 
 const PostItem = ({
   auth,
-  post: { _id, text, name, avatar, user, likes, comment, date },
+  post: { _id, text, name, avatar, user, likes, comments, date },
 }) => (
   <div class='post bg-white p-1 my-1'>
     <div>
       <a href='profile.html'>
-        <img
-          class='round-img'
-          src='https://s.gravatar.com/avatar/d2a0ebb13432a62258dd6741ba1fac08?s=80'
-          alt=''
-        />
-        <h4>John Doe</h4>
+        <img class='round-img' src={avatar} alt='' />
+        <h4>{name}</h4>
       </a>
     </div>
     <div>
-      <p class='my-1'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint possimus
-        corporis sunt necessitatibus! Minus nesciunt soluta suscipit nobis. Amet
-        accusamus distinctio cupiditate blanditiis dolor? Illo perferendis
-        eveniet cum cupiditate aliquam?
+      <p class='my-1'>{text}</p>
+      <p class='post-date'>
+        Posted on <Moment format='DD/MM/YYYY'>{date}</Moment>
       </p>
-      <p class='post-date'>Posted on 04/16/2019</p>
       <button type='button' class='btn btn-light'>
-        <i class='fas fa-thumbs-up'></i>
-        <span>4</span>
+        <i class='fas fa-thumbs-up'></i>{' '}
+        <span>  {likes.length > 0 && (
+          <span class='comment-count'>{likes.length}</span>
+        )}</span>
       </button>
       <button type='button' class='btn btn-light'>
-        <i class='fas fa-thumbs-down'></i>
+        <i class='fas fa-thumbs-down'></i>{' '}
       </button>
-      <a href='post.html' class='btn btn-primary'>
-        Discussion <span class='comment-count'>2</span>
-      </a>
-      <button type='button' class='btn btn-danger'>
-        <i class='fas fa-times'></i>
-      </button>
+      <Link to={`/post/${_id}`} class='btn btn-primary'>
+        Thread{' '}
+        {comments.length > 0 && (
+          <span class='comment-count'>{comments.length}</span>
+        )}
+      </Link>
+      {!auth.loading && user === auth.user._id && (
+        <button type='button' class='btn btn-danger'>
+          <i class='fas fa-times'></i>{' '}
+        </button>
+      )}
     </div>
   </div>
 );

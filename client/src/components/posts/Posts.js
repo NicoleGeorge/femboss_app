@@ -15,7 +15,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Fragment>
       <h1 className='large text-primary'>Forum</h1>
       <p className='lead'>
-        <i className='fas fa-users'></i> Welcome to the femBOSS Network!
+        <i className='fas fa-users'></i> Welcome to the femBOSS Forum!
       </p>
       <div className='posts'>
           {posts.map(post => (

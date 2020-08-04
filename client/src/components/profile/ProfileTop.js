@@ -63,7 +63,7 @@ const ProfileTop = ({
       </div>
       <div>
       <Link to="/" className="btn my-1 btn-connect">
-      <i className='fas fa-clipboard'></i> Copy URL
+      <i className='fas fa-copy'></i> Copy URL
       </Link>
       </div>
     </div>

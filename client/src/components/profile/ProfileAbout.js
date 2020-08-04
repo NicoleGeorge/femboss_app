@@ -14,14 +14,14 @@ const ProfileAbout = ({
       {bio && (
         <Fragment>
           <h2 class='text-primary'>
-            A litle about {name.trim().split(' ')[0]}
+            About {name.trim().split(' ')[0]}
           </h2>
           <p>{bio}</p>
           <div class='line'></div>
         </Fragment>
       )}
 
-      <h2 class='text-primary'>I'm good at</h2>
+      <h2 class='text-primary'>Good at</h2>
       <div class='skills'>
         {skills.map((skills, index) => (
           <div key={index} className='p-1'>

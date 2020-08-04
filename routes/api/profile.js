@@ -120,19 +120,15 @@ router.post(
 // @description     Get all user profile
 // @access          Public
 
-router.get('/'),
-  async (req, res) => {
-    try {
-      const profiles = await Profile.find().populate('user', [
-        'name',
-        'avatar',
-      ]);
-      res.json(profiles);
-    } catch (error) {
-      console.error(error.message);
-      res.status(500).send('Server Error');
-    }
-  };
+router.get('/', async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+    res.json(profiles);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 // @route           GET api/profile/:user_id
 // @description     Get user profile by userid

@@ -18,7 +18,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
       ) : (
         <Fragment>
           <h1 className='large text-primary'>Members</h1>
-          <p className='lead'>
+          <p className='lead-profile'>
           <i className='fas fa-user-astronaut'></i> Join forces, collaborate &
             launch projects!
           </p>
@@ -33,7 +33,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           </div>}
         </Fragment>
       )}
-      <Fragment>profile</Fragment>
+      {/* <Fragment>profile</Fragment> */}
     </Fragment>
   );
 };

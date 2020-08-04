@@ -8,7 +8,7 @@ const PostForm = ({ addPost }) => {
 
   return (
     <div className='post-form'>
-      <div className='bg-primary p'>
+      <div className='badge-highlight p'>
         <h3>What's on your mind...</h3>
       </div>
       <form

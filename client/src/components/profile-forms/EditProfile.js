@@ -75,8 +75,8 @@ const EditProfile = ({
   return (
     <Fragment>
       <h1 className='large'>About Me</h1>
-      <p className='lead'>
-        <i className='fas fa-hat-wizard'></i> Help others know what you can
+      <p className='lead-profile'>
+        <i className='fas fa-hat-wizard'></i> Help others get to know you, what you can
         offer and how they can help.
       </p>
       <small>* = required field</small>
@@ -84,10 +84,10 @@ const EditProfile = ({
         <div className='form-group'>
           <select name='status' value={status} onChange={(e) => onChange(e)}>
             <option value='0'>* Select Professional Status</option>
-            <option value='Developer'>Developer</option>
+            <option value='Web Designer'>Web Designer</option>
             <option value='Junior Developer'>Junior Developer</option>
             <option value='Senior Developer'>Senior Developer</option>
-            <option value='Manager'>Manager</option>
+            <option value='Manager'>Manager/Boss Babe</option>
             <option value='Student or Learning'>Student or Learning</option>
             <option value='Instructor'>Instructor or Teacher</option>
             <option value='Intern'>Intern</option>
@@ -106,19 +106,19 @@ const EditProfile = ({
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own company or one you work for
+            Could be your own biz or one you work for
           </small>
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Website'
+            placeholder='Portfolio site'
             name='website'
             value={website}
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own or a company website
+            Could be your portfolio site or a your biz website
           </small>
         </div>
         <div className='form-group'>
@@ -129,9 +129,7 @@ const EditProfile = ({
             value={location}
             onChange={(e) => onChange(e)}
           />
-          <small className='form-text'>
-            City & state suggested (eg. Boston, MA)
-          </small>
+          <small className='form-text'>City & state (eg. Adelaide, SA)</small>
         </div>
         <div className='form-group'>
           <input
@@ -165,7 +163,9 @@ const EditProfile = ({
             value={bio}
             onChange={(e) => onChange(e)}
           ></textarea>
-          <small className='form-text'>Tell us a little about yourself</small>
+          <small className='form-text'>
+            Tell us a little about yourself coder girl!
+          </small>
         </div>
 
         <div className='my-2'>
@@ -174,9 +174,9 @@ const EditProfile = ({
             type='button'
             className='btn btn-light'
           >
-            Add Social Network Links
+            Add Socials
           </button>
-          <span>Optional</span>
+          <span>Optional but recommended</span>
         </div>
 
         {displaySocialInputs && (

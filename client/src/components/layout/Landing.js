@@ -10,7 +10,8 @@ export const Landing = ({ isAuthenticated }) => {
 
   return (
     <section className='landing'>
-      <div className='dark-overlay'>
+      <img src='../../img/logo_tiny.png' alt='' />
+      <div className='landing-overlay'>
         <div className='landing-inner'>
           <h1 className='x-large'>what is femBOSS?</h1>
           <p className='lead'>
@@ -20,6 +21,7 @@ export const Landing = ({ isAuthenticated }) => {
             much more. We are unapologetic in our belief that
             #WhatsInYourHeadMatters and unwavering in our support for women who
             are chasing thier dreams by pusuing a career in tech.
+            <string> ambition begins here</string>
           </p>
           <div className='buttons'>
             <Link to='/join' className='btn btn-primary'>
@@ -30,6 +32,10 @@ export const Landing = ({ isAuthenticated }) => {
             </Link>
           </div>
         </div>
+        {/* <div className='landing-two'> */}
+          
+          {/* <h1>hello!!</h1>
+        </div> */}
       </div>
     </section>
   );

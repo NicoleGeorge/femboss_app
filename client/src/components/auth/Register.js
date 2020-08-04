@@ -62,7 +62,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <section className='join-hero'>
+      <div className='join-hero'>
         <h1 className='large text-primary '>Join</h1>
         <p className='lead'>
           <i className='fas fa-magic'></i> Create Your Account
@@ -116,7 +116,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         <p className='my-1'>
           Already a femBOS member? <Link to='/login'>login</Link>
         </p>
-      </section>
+      </div>
+      {/* <div>
+        <h1>hi!!</h1>
+      </div> */}
     </Fragment>
   );
 };

@@ -2,6 +2,8 @@ import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
+import VirtualCoworking from './components/layout/VirtualCoworking';
+import Resources from './components/layout/Resources';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
@@ -47,6 +49,8 @@ const App = () => {
               <PrivateRoute exact path='/profiles' component={Profiles} />
               <PrivateRoute exact path='/profile/:id' component={Profile} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
+              <PrivateRoute exact path='/virtual-coworking' component={VirtualCoworking} />
+              <PrivateRoute exact path='/resources' component={Resources} />
               <PrivateRoute
                 exact
                 path='/create-profile'
@@ -72,7 +76,6 @@ const App = () => {
             </Switch>
           </section>
         </Fragment>
-
       </Router>
     </Provider>
   );

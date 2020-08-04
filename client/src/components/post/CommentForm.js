@@ -7,7 +7,7 @@ const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState('');
   return (
     <div className='post-form'>
-      <div className='bg-primary p'>
+      <div className='badge-highlight p'>
         <h3>Join the conversation...</h3>
       </div>
       <form

@@ -11,7 +11,7 @@ const Education = ({ education, deleteEducation }) => {
       <td className='hide-sm'>{edu.degree}</td>
       <td>
         <Moment format='DD/MM/YY'>{edu.from}</Moment> -{' '}
-        {edu.to === null ? ' Now' : <Moment format='DD/MM/YY'>{edu.to}</Moment>}
+        {edu.to === null ? ' Current' : <Moment format='DD/MM/YY'>{edu.to}</Moment>}
       </td>
       <td>
         <button
@@ -32,8 +32,8 @@ const Education = ({ education, deleteEducation }) => {
           <tr>
             <th>School</th>
             <th className='hide-sm'>Accreditation</th>
-            <th className='hide-sm'>Years</th>
-            <th className='hide-sm'>Remove</th>
+            <th className=''>Years</th>
+            {/* <th className='hide-sm'>Remove</th> */}
           </tr>
         </thead>
         <tbody>{educations}</tbody>

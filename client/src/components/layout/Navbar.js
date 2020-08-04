@@ -20,13 +20,13 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
       <li>
-        <Link className='btn btn-nav btn-nav-member' to='/profiles'>
+        <Link className='btn btn-nav btn-nav-member' to='/virtual-coworking'>
           <i className='fas fa-video'></i>{' '}
           <span className='hide-sm'> Virtual CoWorking</span>
         </Link>
       </li>
       <li>
-        <Link className='btn btn-nav btn-nav-member' to='/profiles'>
+        <Link className='btn btn-nav btn-nav-member' to='/resources'>
           <i class='fas fa-link'></i>
           <span className='hide-sm'> Resources</span>
         </Link>

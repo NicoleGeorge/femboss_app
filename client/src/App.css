@@ -285,7 +285,7 @@ img {
 
 .join-hero {
   position: relative;
-  background: url('./img/login-hero-pink.png') no-repeat center/cover;
+  background: url('./img/login-hero.png') no-repeat center/cover;
   height: 50vh;
 }
 .form .form-group {

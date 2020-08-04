@@ -32,7 +32,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
       <li>
-        <Link className='btn btn-nav btn-nav-member' to='dashboard'>
+        <Link className='btn btn-nav btn-nav-member' to='/dashboard'>
           <i className='fas fa-user-astronaut'></i>
           {''}
           <span className='hide-sm'> Dashboard</span>

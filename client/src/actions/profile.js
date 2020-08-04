@@ -46,10 +46,11 @@ export const getProfiles = () => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: PROFILE_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status },
+      payload: { msg: err.response ? err.response.statusText : err.message , status: err.status || 0},
     });
   }
 };
+
 
 // get all user profiles by :id ===> profile page of another user will load
 

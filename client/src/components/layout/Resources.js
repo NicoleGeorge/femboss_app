@@ -5,7 +5,7 @@ export const Resources = () => {
   return (
     <section className='container-resource'>
       <div className='services-inner'>
-        <h1 className='x-large'>Resources</h1>
+        <h1 className='x-large'><i class='fas fa-link'></i>{' '}Resources</h1>
         <h1>We're here to help you!</h1>
         <p className='lead'>
           <br />

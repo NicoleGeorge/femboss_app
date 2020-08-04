@@ -19,7 +19,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Fragment>
           <h1 className='large text-primary'>Members</h1>
           <p className='lead-profile'>
-          <i className='fas fa-user-astronaut'></i> Join forces, collaborate,
+          <i className='fas fa-code-branch'></i> Join forces, collaborate,
             launch projects!
           </p>
           {/* <div className='form-profile'>

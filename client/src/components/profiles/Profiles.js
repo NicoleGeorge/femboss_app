@@ -22,9 +22,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           <i className='fas fa-user-astronaut'></i> Join forces, collaborate &
             launch projects!
           </p>
-          <Link to="/" className="btn btn-primary">
-        Back to dashboard
-      </Link>
+
           {<div className="profiles">
             {profiles.length > 0 ? ( profiles.map(profile => (
               profile.user && 
@@ -34,6 +32,9 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         </Fragment>
       )}
       {/* <Fragment>profile</Fragment> */}
+      <Link to="/" className="btn btn-primary">
+        Back to dashboard
+      </Link>
     </Fragment>
   );
 };

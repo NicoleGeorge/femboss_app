@@ -29,7 +29,7 @@ const CommentItem = ({
           type='button'
           className='btn btn-danger'
         >
-          <i className='fas fa-times'></i>
+          <i className='fas fa-eraser'></i>
         </button>
       )}
     </div>

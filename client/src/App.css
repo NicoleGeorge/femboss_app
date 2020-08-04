@@ -104,6 +104,12 @@ img {
   text-align: justify;
 }
 
+.lead-profile {
+  font-size: 1.4rem;
+  width: 100%;
+  margin: 1.2rem 0;
+}
+
 .text-center {
   text-align: center;
 }
@@ -275,17 +281,16 @@ img {
 .alert-white {
   background: #fff;
   color: #333;
-  border: #ccc solid 1px;
 }
 
 .btn:hover {
   opacity: 0.8;
 }
 
-.bg-light,
+/* .bg-light,
 .badge-light {
   border: #ccc solid 1px;
-}
+} */
 
 .round-img {
   border-radius: 50%;
@@ -349,7 +354,7 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 0.9rem;
-  border: 1px solid #ccc;
+  border: 1px solid #C59DD3;
 }
 
 .form-profile input[type='text'],
@@ -362,7 +367,7 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 0.9rem;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; 
 }
 
 .form input[type='submit'],
@@ -434,15 +439,6 @@ button {
   height: 100vh;
 }
 
-/* .landing-two {
-  position: relative;
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  background: url('./img/login-hero-pink.png') no-repeat center/cover;
-  margin: 0;
-  height: 100vh;
-} */
-
 .landing-inner {
   color: black;
   height: 100%;
@@ -458,7 +454,6 @@ button {
 .services-inner {
   color: black;
   height: 100%;
-
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -477,6 +472,7 @@ button {
   line-height: 1.8;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border-radius: 20px;
 }
 
 /* Profile Page */
@@ -488,6 +484,7 @@ button {
     'exp edu'
     'github github';
   grid-gap: 1rem;
+  border-radius: 20px;
 }
 
 .profile-top {
@@ -497,6 +494,8 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 20px;
+  background-color: var(--highlight-color);
 }
 
 .profile-top img {
@@ -515,6 +514,7 @@ button {
 .profile-about {
   grid-area: about;
   text-align: center;
+  border-radius: 20px;
 }
 
 .profile-about .skills {
@@ -526,10 +526,12 @@ button {
 
 .profile-exp {
   grid-area: exp;
+  border-radius: 20px;
 }
 
 .profile-edu {
   grid-area: edu;
+  border-radius: 20px;
 }
 
 .profile-exp h2,
@@ -560,6 +562,7 @@ button {
 
 .profile-github .repo {
   display: flex;
+  border-radius: 20px;
 }
 
 .profile-github .repo > div:first-child {
@@ -583,7 +586,9 @@ button {
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
+  border-radius: 20px;
 }
+
 
 .post > div:first-child {
   text-align: center;
@@ -646,7 +651,7 @@ button {
   }
 
   .lead-profile {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     width: 100%;
   }
 
@@ -681,11 +686,21 @@ button {
     padding: 0.4rem;
     font-size: 1.2rem;
     border: 1px solid #ccc;
+    
+  }
+
+  .textarea-posts {
+    display: block;
+    width: 40%;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    border: 1px solid #C59DD3;
   }
   /* Profiles Page */
   .profile {
     grid-template-columns: 1fr;
     text-align: center;
+    border-radius: 20px;
   }
 
   .profile ul {

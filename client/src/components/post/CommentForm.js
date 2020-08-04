@@ -19,6 +19,7 @@ const CommentForm = ({ postId, addComment }) => {
         }}
       >
         <textarea
+        className='textarea-posts'
           name='text'
           cols='30'
           rows='5'

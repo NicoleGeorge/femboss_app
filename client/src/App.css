@@ -244,6 +244,7 @@ img {
 }
 
 .badge-highlight {
+  width: 100%;
   background: var(--highlight-color);
   color: #fff;
 }
@@ -335,10 +336,17 @@ img {
 .form input[type='email'],
 .form input[type='password'],
 .form input[type='date'],
-.form select,
-.form textarea {
+.form select {
   display: block;
   width: 40%;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+}
+
+.textarea-posts {
+  display: block;
+  width: 100%;
   padding: 0.4rem;
   font-size: 0.9rem;
   border: 1px solid #ccc;

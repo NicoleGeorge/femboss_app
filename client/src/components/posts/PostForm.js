@@ -20,6 +20,7 @@ const PostForm = ({ addPost }) => {
         }}
       >
         <textarea
+          className='textarea-posts'
           name='text'
           cols='30'
           rows='5'

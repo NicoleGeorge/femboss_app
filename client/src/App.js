@@ -72,6 +72,7 @@ const App = () => {
             </Switch>
           </section>
         </Fragment>
+
       </Router>
     </Provider>
   );

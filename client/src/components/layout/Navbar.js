@@ -50,6 +50,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
+      {/* made viewing Members only accissible to logged in users */}
       {/* <li>
         <Link className='btn btn-nav btn-nav-member' to='/profiles'>
           Members

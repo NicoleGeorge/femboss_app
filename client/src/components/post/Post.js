@@ -5,7 +5,8 @@ import Spinner from '../layout/Spinner';
 import PostItem from '../posts/PostItem';
 import { getPost } from '../../actions/post';
 import { Link } from 'react-router-dom';
-import CommentForm from './CommentForm';
+import CommentForm from '../post/CommentForm';
+import CommentItem from '../post/CommentItem';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
@@ -20,6 +21,11 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       </Link>
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
+      <div className='comments'>
+        {post.comments.map((comment) => (
+          <CommentItem key={comment._id} comment={comment} postId={post._id} />
+        ))}
+      </div>
     </Fragment>
   );
 };
@@ -34,3 +40,6 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { getPost })(Post);
+
+// post comment thread ==> loop through the comments (array in the Post collection)
+// then finally output component of CommentItem

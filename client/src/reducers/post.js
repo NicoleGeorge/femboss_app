@@ -1,9 +1,12 @@
 import {
   GET_POSTS,
+  GET_POST,
   POST_ERROR,
   UPDATE_LIKES,
   DELETE_POST,
   ADD_POST,
+  ADD_COMMENT,
+  DELETE_COMMENT,
 } from '../actions/types';
 
 const initialState = {
@@ -21,6 +24,12 @@ export default function (state = initialState, action) {
       return {
         ...state,
         posts: payload,
+        loading: false,
+      };
+    case GET_POST:
+      return {
+        ...state,
+        post: payload,
         loading: false,
       };
     case ADD_POST:
@@ -47,6 +56,24 @@ export default function (state = initialState, action) {
         posts: state.posts.map((post) =>
           post._id === payload.id ? { ...post, likes: payload.likes } : post
         ),
+        loading: false,
+      };
+    case ADD_COMMENT:
+      return {
+        ...state,
+        post: { ...state.post, comments: payload },
+        loading: false,
+      };
+    case DELETE_COMMENT:
+      return {
+        ...state,
+        post: {
+          ...state.post,
+          comments: state.post.comment.filter(
+            //delete comment from the state & ui ==> since it's been delted serverside
+            (comment) => comment._id !== payload
+          ),
+        },
         loading: false,
       };
     default:

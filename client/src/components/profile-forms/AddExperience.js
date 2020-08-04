@@ -25,7 +25,7 @@ const AddExperience = ({ addExperience, history }) => {
   return (
     <Fragment>
       <h1 class='large text-primary'>My Journey</h1>
-      <p class='lead'>
+      <p class='lead-profile'>
         <i class='fas fa-laptop-code'></i> Tell others where you've been and
         what you've done.
       </p>

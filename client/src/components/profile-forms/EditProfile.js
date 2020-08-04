@@ -76,8 +76,8 @@ const EditProfile = ({
     <Fragment>
       <h1 className='large'>About Me</h1>
       <p className='lead-profile'>
-        <i className='fas fa-hat-wizard'></i> Help others get to know you, what you can
-        offer and how they can help.
+        <i className='fas fa-hat-wizard'></i> Help others get to know you, what
+        you can offer and how they can help.
       </p>
       <small>* = required field</small>
       <form className='form-profile' onSubmit={(e) => onSubmit(e)}>
@@ -87,10 +87,10 @@ const EditProfile = ({
             <option value='Web Designer'>Web Designer</option>
             <option value='Junior Developer'>Junior Developer</option>
             <option value='Senior Developer'>Senior Developer</option>
-            <option value='Manager'>Manager/Boss Babe</option>
-            <option value='Student or Learning'>Student or Learning</option>
+            <option value='Manager'>Manager / Boss Babe</option>
+            <option value='Student or Learning'>Student / Learning</option>
             <option value='Instructor'>Instructor or Teacher</option>
-            <option value='Intern'>Intern</option>
+            <option value='Volunteer'>Volunteer</option>
             <option value='Other'>Other</option>
           </select>
           <small className='form-text'>

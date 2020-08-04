@@ -111,7 +111,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               //   minLength='6'
             />
           </div>
-          <input type='submit' className='btn btn-primary' value='Join' />
+          <input type='submit' className='btn-auth btn-primary' value='Join' />
         </form>
         <p className='my-1'>
           Already a femBOS member? <Link to='/login'>login</Link>

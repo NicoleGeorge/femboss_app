@@ -53,6 +53,19 @@ const ProfileTop = ({
           </a>
         )}
       </div>
+      <div>
+      <Link to="/" className="btn my-1 btn-connect">
+      <i className='fas fa-award'></i> Admire
+      </Link>
+      <Link to="/" className="btn my-1 btn-connect">
+      <i className='fas fa-hand-sparkles'></i> Connect
+      </Link>
+      </div>
+      <div>
+      <Link to="/" className="btn my-1 btn-connect">
+      <i className='fas fa-clipboard'></i> Copy URL
+      </Link>
+      </div>
     </div>
   );
 };

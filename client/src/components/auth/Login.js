@@ -57,7 +57,7 @@ const Login = ({ login, isAuthenticated }) => {
               // minLength='6'
             />
           </div>
-          <input type='submit' className='btn btn-primary' value='Login' />
+          <input type='submit' className='btn-auth btn-primary' value='Login' />
         </form>
         <p className='my-1'>
           Not a femBOSS member? <Link to='/join'>Join us!</Link>

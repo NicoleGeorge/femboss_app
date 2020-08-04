@@ -57,12 +57,12 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li> */}
       <li>
-        <Link className='btn btn-nav' to='/join'>
+        <Link className='btn-auth btn-nav' to='/join'>
           Join
         </Link>
       </li>
       <li>
-        <Link className='btn btn-nav' to='/login'>
+        <Link className='btn-auth btn-nav' to='/login'>
           Log in
         </Link>
       </li>

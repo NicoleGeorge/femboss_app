@@ -19,9 +19,32 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Fragment>
           <h1 className='large text-primary'>Members</h1>
           <p className='lead-profile'>
-          <i className='fas fa-user-astronaut'></i> Join forces, collaborate &
+          <i className='fas fa-user-astronaut'></i> Join forces, collaborate,
             launch projects!
           </p>
+          {/* <div className='form-profile'>
+          <div className='form-group'>
+          <select name='status' value>
+            <option value='0'>Search by technology</option>
+            <option value='Html/CSS'>HTML/CSS</option>
+            <option value='JavaScript'>JavaScript</option>
+            <option value='ReactJS'>ReactJS</option>
+            <option value='Vue.js'>Vue.js</option>
+            <option value='Bootstrap 5'>Bootstrap 5</option>
+            <option value='Node js'>Node js</option>
+            <option value='PWA'>PWA</option>
+            <option value='Adobe CC'>Adobe CC</option>
+          </select>
+        </div>
+        </div> */}
+          {/* <div class='form-profile'>
+          <input
+            type='text'
+            placeholder='Search members'
+            name=''
+            value=''
+          />
+        </div> */}
 
           {<div className="profiles">
             {profiles.length > 0 ? ( profiles.map(profile => (

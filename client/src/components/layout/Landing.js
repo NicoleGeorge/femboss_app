@@ -24,10 +24,10 @@ export const Landing = ({ isAuthenticated }) => {
             <string> ambition begins here</string>
           </p>
           <div className='buttons'>
-            <Link to='/join' className='btn btn-primary'>
+            <Link to='/join' className='btn-auth btn-primary'>
               Join
             </Link>
-            <Link to='/login' className='btn btn-primary'>
+            <Link to='/login' className='btn-auth btn-primary'>
               Log in
             </Link>
           </div>

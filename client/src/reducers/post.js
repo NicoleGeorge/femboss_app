@@ -69,7 +69,7 @@ export default function (state = initialState, action) {
         ...state,
         post: {
           ...state.post,
-          comments: state.post.comment.filter(
+          comments: state.post.comments.filter(
             //delete comment from the state & ui ==> since it's been delted serverside
             (comment) => comment._id !== payload
           ),

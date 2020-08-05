@@ -53,7 +53,6 @@ img {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
-  /* background-color: #ffb6c129; */
 }
 
 .landing {
@@ -71,7 +70,6 @@ img {
   height: 70vh;
   margin: 0;
   background: url('./img/coworking-hero2.png') no-repeat center/cover;
-  /* background-color: #f7bcd6 ; */
 }
 
 .container-resource {
@@ -81,10 +79,9 @@ img {
   height: 60vh;
   margin: 0;
   background: url('./img/resources-hero-final2.png') no-repeat center/cover;
-  /* background-color: #f7bcd6 ; */
 }
 
-/* Text Styles*/
+/*  TEXT STYLES */
 .x-large {
   font-size: 4rem;
   line-height: 1.2;
@@ -125,7 +122,7 @@ img {
 .icon-dashboard {
   color: var(--light-color);
 }
-/* Padding */
+/* PADDING SHORTCUTS ==> BASED ON BOOTSTRAP CLASSES */
 .p {
   padding: 0.5rem;
 }
@@ -151,7 +148,7 @@ img {
   padding: 3rem 0;
 }
 
-/* Margin */
+/* MARGIN SHORTCUTS ==> BASED ON BOOTSTRAP CLASSES */
 .m {
   margin: 0.5rem;
 }
@@ -177,6 +174,7 @@ img {
   margin: 3rem 0;
 }
 
+/* BUTTON STYLES */
 .btn {
   display: inline-block;
   background: var(--dark-color);
@@ -306,11 +304,6 @@ img {
   opacity: 0.8;
 }
 
-/* .bg-light,
-.badge-light {
-  border: #ccc solid 1px;
-} */
-
 .round-img {
   border-radius: 50%;
 }
@@ -321,7 +314,7 @@ img {
   margin: 1.5rem 0;
 }
 
-/* Overlay */
+/* LANDING PAGE OVERLAY ==> NOT USED ON FINAL, PREFERRED THE BACKGROUND IMAGE */
 .landing-overlay {
   position: absolute;
   top: 0;
@@ -330,7 +323,7 @@ img {
   height: 100%;
 }
 
-/* Forms */
+/* FORM STYLES  */
 
 .join-hero {
   max-width: 1100px;
@@ -343,8 +336,6 @@ img {
   background: url('./img/login-hero.png') center/cover;
   height: 50vh;
 }
-/* background: url('./img/login-hero-pink.png') center/cover;
-  height: 100vh; */
 
 .form .form-group {
   margin: 1.2rem 0;
@@ -373,7 +364,7 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 0.9rem;
-  border: 1px solid #C59DD3;
+  border: 1px solid #c59dd3;
 }
 
 .form-profile input[type='text'],
@@ -386,7 +377,7 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 0.9rem;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
 }
 
 .form input[type='submit'],
@@ -413,7 +404,7 @@ button {
   background: var(--light-color);
 }
 
-/* Navbar */
+/* NAVBAR STYLES */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -423,8 +414,6 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  /* border-bottom: solid 1px var(--primary-color); */
-  /* opacity: 0.9; */
 }
 
 .navbar-logo {
@@ -449,7 +438,7 @@ button {
   margin-right: 0.6rem;
 }
 
-/* Landing Page */
+/* LANDING PAGE STYLES */
 .landing {
   position: relative;
   display: grid;
@@ -481,7 +470,7 @@ button {
   text-align: left;
 }
 
-/* Profiles Page */
+/* PROFILE PAGE STYLES */
 .profile {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
@@ -494,7 +483,6 @@ button {
   border-radius: 20px;
 }
 
-/* Profile Page */
 .profile-grid {
   display: grid;
   grid-template-areas:
@@ -594,7 +582,7 @@ button {
   flex-basis: 20%;
 }
 
-/* Posts Page */
+/* FORUM PAGE STYLES */
 .post-form .post-form-header {
   background: var(--highlight-color);
   padding: 0.5rem;
@@ -607,7 +595,6 @@ button {
   align-items: center;
   border-radius: 20px;
 }
-
 
 .post > div:first-child {
   text-align: center;
@@ -631,7 +618,7 @@ button {
   margin-bottom: 0.5rem;
 }
 
-/* Mobile Styles */
+/* MOBILE RESPONSIVE STYLES */
 @media (max-width: 700px) {
   .container {
     margin-top: 10rem;
@@ -655,7 +642,7 @@ button {
   .container-resource {
     background: none;
   }
-  /* Text Styles */
+  /* TEXT STYLES */
   .x-large {
     font-size: 3rem;
   }
@@ -674,7 +661,7 @@ button {
     width: 100%;
   }
 
-  /* Navbar */
+  /* NAVBAR STYLES */
   .navbar {
     display: block;
     text-align: center;
@@ -693,7 +680,7 @@ button {
     display: none;
   }
 
-  /* form */
+  /* FORM STYLES */
   .form input[type='text'],
   .form input[type='email'],
   .form input[type='password'],
@@ -705,7 +692,6 @@ button {
     padding: 0.4rem;
     font-size: 1.2rem;
     border: 1px solid #ccc;
-    
   }
 
   .textarea-posts {
@@ -713,9 +699,10 @@ button {
     width: 40%;
     padding: 0.4rem;
     font-size: 0.9rem;
-    border: 1px solid #C59DD3;
+    border: 1px solid #c59dd3;
   }
-  /* Profiles Page */
+
+  /* PROFILE PAGE STYLES */
   .profile {
     grid-template-columns: 1fr;
     text-align: center;
@@ -725,8 +712,6 @@ button {
   .profile ul {
     display: none;
   }
-
-  /* Profile Page */
 
   .profile-top img,
   .profile img {

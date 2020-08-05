@@ -13,9 +13,7 @@ const ProfileAbout = ({
       {/* show only if the user has included a bio within their profile page */}
       {bio && (
         <Fragment>
-          <h2 class='text-primary'>
-            About {name.trim().split(' ')[0]}
-          </h2>
+          <h2 class='text-primary'>About {name.trim().split(' ')[0]}</h2>
           <p>{bio}</p>
           <div class='line'></div>
         </Fragment>

@@ -101,6 +101,13 @@ img {
   text-align: justify;
 }
 
+.lead-profile-top {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  width: 40%;
+  text-align: center;
+}
+
 .lead-profile {
   font-size: 1.4rem;
   width: 100%;

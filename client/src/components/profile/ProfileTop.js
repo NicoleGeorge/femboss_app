@@ -54,22 +54,25 @@ const ProfileTop = ({
         )}
       </div>
       <div>
-      <Link to="/" className="btn my-1 btn-connect">
-      <i className='fas fa-award'></i> Admire
-      </Link>
-      <Link to="/" className="btn my-1 btn-connect">
-      <i className='fas fa-hand-sparkles'></i> Connect
-      </Link>
+        <Link to='/' className='btn my-1 btn-connect'>
+          <i className='fas fa-award'></i> Admire
+        </Link>
+        <Link to='/' className='btn my-1 btn-connect'>
+          <i className='fas fa-hand-sparkles'></i> Connect
+        </Link>
       </div>
       <div>
-      <Link to="/" className="btn my-1 btn-connect">
-      <i className='fas fa-copy'></i> Copy URL
-      </Link>
+        <Link to='/' className='btn my-1 btn-connect'>
+          <i className='fas fa-copy'></i> Copy URL
+        </Link>
       </div>
     </div>
   );
 };
 
-ProfileTop.propTypes = {};
+ProfileTop.propTypes = {
+  profile: PropTypes.object.isRequired,
+  experience: PropTypes.object.isRequired,
+};
 
 export default ProfileTop;

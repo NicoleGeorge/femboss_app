@@ -16,8 +16,8 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Fragment>
       <h1 className='large text-primary'>Forum</h1>
       <p className='lead-profile'>
-        <i className='fas fa-comments'></i> Ask questions, exchange ideas, and
-        connect with each other!
+        <i className='fas fa-comments'></i> Ask questions, exchange ideas,
+        connect others!
       </p>
       <PostForm />
       <div className='posts'>

@@ -10,18 +10,16 @@ export const Landing = ({ isAuthenticated }) => {
 
   return (
     <section className='landing'>
-      <img src='../../img/logo_tiny.png' alt='' />
+      <img src='../../img/icon.png' alt='' />
       <div className='landing-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>what is femBOSS?</h1>
-          <p className='lead'>
-            femBOSS is an education, support & social network membership for
-            ambitious #WomenInTech. We provide resources and mentorship through
-            virtual coworking, newsletters, courses, online networking, and so
-            much more. We are unapologetic in our belief that
-            #WhatsInYourHeadMatters and unwavering in our support for women who
-            are chasing thier dreams by pusuing a career in tech.
-            <string> ambition begins here</string>
+          <h1 className='x-large'>femBOSS</h1>
+          <h1 className='medium'>
+            The Professional Network for 
+            Women in Tech
+          </h1>
+          <p className='lead-profile-top'>
+            <string> ...ambition begins here.</string>
           </p>
           <div className='buttons'>
             <Link to='/join' className='btn-auth btn-primary'>
@@ -33,8 +31,8 @@ export const Landing = ({ isAuthenticated }) => {
           </div>
         </div>
         {/* <div className='landing-two'> */}
-          
-          {/* <h1>hello!!</h1>
+
+        {/* <h1>hello!!</h1>
         </div> */}
       </div>
     </section>

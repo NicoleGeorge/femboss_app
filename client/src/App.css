@@ -58,7 +58,7 @@ img {
 .landing {
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-columns: 1fr 4fr 2fr;
   background: url('./img/hero.png') no-repeat center/cover;
   height: 100vh;
 }
@@ -69,7 +69,7 @@ img {
   grid-template-columns: 5fr 1fr;
   height: 70vh;
   margin: 0;
-  background: url('./img/coworking-hero2.png') no-repeat center/cover;
+  background: url('./img/services-hero-final.png') no-repeat center/cover;
 }
 
 .container-resource {
@@ -78,7 +78,7 @@ img {
   grid-template-columns: 4fr 1fr;
   height: 60vh;
   margin: 0;
-  background: url('./img/resources-hero-final2.png') no-repeat center/cover;
+  background: url('./img/resources-hero-final4.png') no-repeat center/cover;
 }
 
 /*  TEXT STYLES */
@@ -90,6 +90,12 @@ img {
 
 .large {
   font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.medium {
+  font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -322,13 +328,13 @@ img {
 }
 
 /* LANDING PAGE OVERLAY ==> NOT USED ON FINAL, PREFERRED THE BACKGROUND IMAGE */
-.landing-overlay {
+/* .landing-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
 /* FORM STYLES  */
 
@@ -663,11 +669,27 @@ button {
     width: 90%;
   }
 
+  .meduim {
+    font-size: 0.8rem;
+    width: 100%;
+  }
   .lead-profile {
     font-size: 1.2rem;
     width: 100%;
+    text-align: left;
   }
 
+  .landing-inner {
+    color: black;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   /* NAVBAR STYLES */
   .navbar {
     display: block;

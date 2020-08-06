@@ -12,12 +12,12 @@
 
 ## Descripttion
 
-the femBOSS Professional Network is aplatform built for ambitious #WomenInTech.
-It's a place that provides resources and mentorship through virtual coworking, online networking, and so much more. We are unapologetic in our belief that #WhatsInYourHeadMatters and unwavering in our dupport for women who are chasing their dreams by pursuing a career in tech.
+the femBOSS Professional Network is a platform built for ambitious #WomenInTech.
+It's a place that provides resources and mentorship through virtual coworking, online networking, and so much more. We are unapologetic in our belief that #WhatsInYourHeadMatters and unwavering in our support for women who are chasing their dreams by pursuing a career in tech.
 
 ## User Story
 
-As a self taught coder, I want to connect with other coders to ask questions, share ideas and collaborate on projects so that I can build the connections needed to start a career in tech.
+" As a self taught coder, I want to connect with other coders to ask questions, share ideas and collaborate on projects so that I can build the connections needed to start a career in tech." - female Gen Z user (target demographic)
 
 ## Future Developments 🚧🔜
 

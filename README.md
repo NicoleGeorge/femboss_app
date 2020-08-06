@@ -6,18 +6,18 @@
 - 🚀 Membership signups + BETA testers launching September 2020.
 - 📧 expressions of interest, please email: nicole@cognitivelyfearlessfemales.com
 
-## Presentation
+## Presentation 📼 
 
-- 📼 femBOSS presentation [slide deck](https://www.canva.com/design/DAED-52_bQ8/XC66J9ttwTSts2JM5nGKCA/view?utm_content=DAED-52_bQ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+- femBOSS presentation [slide deck](https://www.canva.com/design/DAED-52_bQ8/XC66J9ttwTSts2JM5nGKCA/view?utm_content=DAED-52_bQ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
-## Descripttion
+## Descripttion ⚡
 
 the femBOSS Professional Network is a platform built for ambitious #WomenInTech.
 It's a place that provides resources and mentorship through virtual coworking, online networking, and so much more. We are unapologetic in our belief that #WhatsInYourHeadMatters and unwavering in our support for women who are chasing their dreams by pursuing a career in tech.
 
-## User Story
+## User Story ⭐
 
-" As a self taught coder, I want to connect with other coders to ask questions, share ideas and collaborate on projects so that I can build the connections needed to start a career in tech." - female Gen Z user (target demographic)
+" As a self taught coder, I want to connect with other coders to ask questions, share ideas and collaborate on projects so that I can build the connections needed to start a career in tech." - female Gen Z user (🌐 target demographic)
 
 ## Future Developments 🚧🔜
 
@@ -49,7 +49,7 @@ It's a place that provides resources and mentorship through virtual coworking, o
 
 - 👽 Nicole George (Head Nerd @ Cognitively Fearless Females)
 
-## Screenshots
+## Screenshots 📷
 
 Desktop + Responsive design: </br>
 ![Screenshots](https://github.com/NicoleGeorge/femboss_app/blob/master/client/src/img/screenshots%20-%20femBOSS%20app.png)

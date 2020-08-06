@@ -4,13 +4,13 @@
 - 🔮 Built for the Cognitively Fearless Females - femBOSS Membership tier.
 - Find CFF on Instagram [@cognitivelyfearlessfemales](https://www.instagram.com/thecognitivelyfearlessfemales)
 - 🚀 Membership signups + BETA testers launching September 2020.
-- 📧 expressions of interest, please email: nicole@cognitivelyfearlessfemales.com
+- 📧 expressions of interest, please email: nicole[@]cognitivelyfearlessfemales.com
 
 ## Presentation 📼 
 
 - femBOSS presentation [slide deck](https://www.canva.com/design/DAED-52_bQ8/XC66J9ttwTSts2JM5nGKCA/view?utm_content=DAED-52_bQ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
-## Descripttion ⚡
+## Description ⚡
 
 the femBOSS Professional Network is a platform built for ambitious #WomenInTech.
 It's a place that provides resources and mentorship through virtual coworking, online networking, and so much more. We are unapologetic in our belief that #WhatsInYourHeadMatters and unwavering in our support for women who are chasing their dreams by pursuing a career in tech.

@@ -1,4 +1,4 @@
-# femboss_app ✨📱
+# femBOSS app ✨📱
 
 - 🎓 The LinkedIn for #WomenInTech
 - 🔮 Built for the Cognitively Fearless Females - femBOSS Membership tier.

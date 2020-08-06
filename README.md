@@ -51,6 +51,9 @@ As a self taught coder, I want to connect with other coders to ask questions, sh
 
 ## Screenshots
 
+Desktop + Responsive design: </br>
+![Screenshots](https://github.com/NicoleGeorge/femboss_app/blob/master/client/src/img/screenshots%20-%20femBOSS%20app.png)
+
 ## References ♥️
 
 - Based on Traversy Media [lecture series](https://www.udemy.com/)

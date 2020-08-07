@@ -1,14 +1,13 @@
 {
   "name": "femboss_app",
   "version": "1.0.0",
-  "description": "Networking app for ambitious #womenInTech",
+  "description": "Professional Network app for ambitious #womenInTech",
   "main": "app.js",
   "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
+    "start": "node app",
+    "server": "nodemon app",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {

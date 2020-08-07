@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
 const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
 
 const app = express();
 // configuring the db
@@ -52,6 +52,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+// only for production
 // app.get('/', (req, res) => res.send('app is running')); ===> removed for deployment
 
 const PORT = process.env.PORT || 5000;

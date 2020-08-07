@@ -8,10 +8,10 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       useNewUrlParser: true,
       useCreateIndex: true,
-      useFindAndModify: false
+      useFindAndModify: false,
     });
     console.log('DB connected');
-  } catch (error) {
+  } catch (err) {
     console.error(err.message);
     // Exit process with failure
     process.exit(1);

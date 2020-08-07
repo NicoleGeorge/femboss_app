@@ -1,12 +1,14 @@
 # femBOSS app ✨📱
 
-- 🎓 The LinkedIn for #WomenInTech
-- 🔮 Built for the Cognitively Fearless Females - femBOSS Membership tier.
-- Find CFF on Instagram [@cognitivelyfearlessfemales](https://www.instagram.com/thecognitivelyfearlessfemales)
-- 🚀 Membership signups + BETA testers launching September 2020.
-- 📧 expressions of interest, please email: nicole[@]cognitivelyfearlessfemales.com
+- View deployed app [here](https://whispering-oasis-00103.herokuapp.com/)
 
-## Presentation 📼 
+* 🎓 The LinkedIn for #WomenInTech
+* 🔮 Built for the Cognitively Fearless Females - femBOSS Membership tier.
+* Find CFF on Instagram [@cognitivelyfearlessfemales](https://www.instagram.com/thecognitivelyfearlessfemales)
+* 🚀 Membership signups + BETA testers launching September 2020.
+* 📧 expressions of interest, please email: nicole[@]cognitivelyfearlessfemales.com
+
+## Presentation 📼
 
 - femBOSS presentation [slide deck](https://www.canva.com/design/DAED-52_bQ8/XC66J9ttwTSts2JM5nGKCA/view?utm_content=DAED-52_bQ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 

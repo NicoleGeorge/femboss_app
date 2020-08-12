@@ -1,6 +1,6 @@
 # femBOSS app ✨📱
 
-- View deployed app [here](https://whispering-oasis-00103.herokuapp.com/)
+- View deployed app [here](https://femboss.herokuapp.com/)
 
 🎓 The LinkedIn for #WomenInTech <br />
 🔮 Built for the Cognitively Fearless Females - femBOSS Membership tier. <br />

@@ -2,11 +2,11 @@
 
 - View deployed app [here](https://whispering-oasis-00103.herokuapp.com/)
 
-🎓 The LinkedIn for #WomenInTech
-🔮 Built for the Cognitively Fearless Females - femBOSS Membership tier.
-Find CFF on Instagram [@cognitivelyfearlessfemales](https://www.instagram.com/cognitivelyfearlessfemales)
-🚀 Membership signups + BETA testers launching September 2020.
-📧 expressions of interest, please email: nicole[@]cognitivelyfearlessfemales.com
+🎓 The LinkedIn for #WomenInTech <br />
+🔮 Built for the Cognitively Fearless Females - femBOSS Membership tier. <br />
+Find CFF on Instagram [@cognitivelyfearlessfemales](https://www.instagram.com/cognitivelyfearlessfemales) <br />
+🚀 Membership signups + BETA testers launching September 2020. <br />
+📧 expressions of interest, please email: nicole[@]cognitivelyfearlessfemales.com <br />
 
 ## Presentation 📼
 
@@ -23,31 +23,31 @@ It's a place that provides resources and mentorship through virtual coworking, o
 
 ## Future Developments 🚧🔜
 
-🔔 User notification system => linked to signup email
-📰 Newsfeed => based on user location, inductry, learning status
-🔗 link in bio => users can copy their profile URL to add it to their social media
-🌻 Users can 'admire' other members - similar to a user like function.
-💌 connect with members => leads to a prompt email then user can accept their invitation to connect.
-🎮 Gamification => user interactivity earnes badges to 'level-up' with Mentor being the highest level
-🔎 Search functionality => users can find other coders based on inductry, language, location
-💾 Interactive posting system => users can edit their post and upload images
+🔔 User notification system => linked to signup email <br />
+📰 Newsfeed => based on user location, inductry, learning status <br />
+🔗 link in bio => users can copy their profile URL to add it to their social media <br />
+🌻 Users can 'admire' other members - similar to a user like function. <br />
+💌 connect with members => leads to a prompt email then user can accept their invitation to connect. <br />
+🎮 Gamification => user interactivity earnes badges to 'level-up' with Mentor being the highest level <br />
+🔎 Search functionality => users can find other coders based on inductry, language, location <br />
+💾 Interactive posting system => users can edit their post and upload images <br />
 
 ## Tech Used 👾
 
-📚 MERN stack ==> MongoDB, express, ReactJS, node.js
-🔮 Redux
-🔐 Authentication ==> jsonwebtoken, uuid, bcrypt
-📞 APIs ==> GitHub, Gravatar, Moment.js => using axios
-🎨 Design ==> CSS Grids + Flexbox
+📚 MERN stack ==> MongoDB, express, ReactJS, node.js <br />
+🔮 Redux <br />
+🔐 Authentication ==> jsonwebtoken, uuid, bcrypt <br />
+📞 APIs ==> GitHub, Gravatar, Moment.js => using axios <br />
+🎨 Design ==> CSS Grids + Flexbox <br />
 
 ## Dev Tool
 
-🔌 VS Code
-🎁 npm
-💻 Chrome DevTools
-📬 Postman
+🔌 VS Code <br />
+🎁 npm <br />
+💻 Chrome DevTools <br />
+📬 Postman <br />
 
-# Author 👓
+# Author 👓 
 
 👽 Nicole George (Head Nerd @ Cognitively Fearless Females)
 
